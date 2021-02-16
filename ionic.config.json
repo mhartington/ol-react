@@ -1,0 +1,7 @@
+{
+  "name": "ol-react",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
