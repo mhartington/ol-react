@@ -11,10 +11,9 @@ export type MapProps = {
   lng: number;
   lat: number;
   zoom: number;
-  heading:  number;
 };
 
-export function MapWrapper({ lat, lng, zoom, heading }: MapProps) {
+export function MapWrapper({ lat, lng, zoom }: MapProps) {
   const mapContainerRef: React.RefObject<HTMLDivElement> = createRef();
   const markerRef: React.RefObject<HTMLImageElement> = createRef();
   const markerOverlay = useRef<Overlay>()
@@ -49,7 +48,7 @@ export function MapWrapper({ lat, lng, zoom, heading }: MapProps) {
     mapInst.current
       ?.getView()
       .animate({ center: fromLonLat([lng, lat])});
-  }, [lat, lng, zoom, heading]);
+  }, [lat, lng, zoom]);
 
   return (
     <>

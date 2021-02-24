@@ -23,7 +23,6 @@ const Home: React.FC = () => {
     lng: -71.418884,
     lat: 41.825226,
     zoom: 10,
-    heading: 0,
 
   });
   useEffect(() => {
@@ -41,7 +40,6 @@ const Home: React.FC = () => {
       lng: loc.coords.longitude,
       lat: loc.coords.latitude,
       zoom: 10,
-      heading: loc.coords.heading ?? 0,
     });
   };
   const trackLocation = () => {
@@ -51,7 +49,6 @@ const Home: React.FC = () => {
         lng: loc.coords.longitude,
         lat: loc.coords.latitude,
         zoom: 10,
-        heading: loc.coords.heading ?? 0,
       });
     });
   };
